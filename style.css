@@ -1,9 +1,56 @@
-.background{
-    background-color: rgb(255, 255, 255);
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
 }
+.background{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll; 
+    box-sizing: border-box;
+    background-color:rgb(1, 1, 1)
+}
+
+
+
 
 .scroll {
     scroll-behavior:smooth;
+}
+
+.bubbles
+{
+    position:relative;
+    display:flex;
+}
+.bubbles span{
+    position: relative;
+    width:30px;
+    height:30px;
+    background: rgb(11, 253, 63);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow:0 0 0 10px rgb(11, 65, 27),
+    0 0 50px rgb(11, 253, 63),
+    0 0 100px rgb(11, 253, 63);
+    animation: bubble 30s linear infinite;
+    animation-duration: calc(300s / var(--i));
+}
+@keyframes bubble{
+    0%{
+        transform:translateY(150vh) scale(0)
+    }
+    100%{
+        transform:translateY(-10vh) scale(1)
+    }
+}
+.bubbles span:nth-child(even){
+    background: rgb(191, 80, 255);
+    box-shadow:0 0 0 10px rgb(46, 10, 61),
+    0 0 50px rgb(191, 80, 255),
+    0 0 100px rgb(191, 80, 255);
 }
 
 .text-size {
@@ -12,6 +59,8 @@
     align-items: center;
     margin-top: 60px;
     padding-top: 55px;
+    color:white;
+    position: relative; z-index: 1
 }
 
 .video{
@@ -24,6 +73,7 @@
 .size{
     width: 620px;
     height: 415px;
+    color:white
 }
 
 .paragraph{
@@ -36,18 +86,8 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 15pt;
     background-color: rgba(0, 0, 0, 0.062);
-}
-
-.active{
-    color: #787316;
-}
-
-.active:visited{
-    color: rgb(14, 39, 66);
-}
-
-.active:hover{
-    color: blueviolet;
+    color:white;
+    position: relative; z-index: 1
 }
 
 .projects{
@@ -55,44 +95,107 @@
 }
 
 .bg-img{
-    background-image: url("");
-    min-height:430px;
+    position:absolute;
+    background-image: linear-gradient(25deg, transparent 45%, rgba(200, 221, 239, 0.799) 45%, rgba(230, 206, 250, 0.653) 55%, transparent 0);
+    background-color:transparent;
+    min-height:450px;
+    top:-5em;
     background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     position: relative;
     margin:50px;
 }
+.box{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:400px;
+
+    
+}
+
+.name{
+  font-family:Verdana;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+  line-height: 0.95em;
+  outline:solid 1px;
+  animation: animate 5s linear infinite;
+  color:#c6e8ff;
+  font-size: 45pt;
+  text-transform: uppercase;
+  background-color: rgba(97, 108, 116, 0.354);
+  border-radius: 15px;
+  position: absolute;
+  top:3.5em
+
+
+}
+@keyframes animate{
+    50%,50%,50%
+    {
+        color:#c6e6efc1;
+        text-shadow:none
+    }
+    50%,50%
+    {
+        color:#f2c9ff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4,
+
+        
+
+    }
+}
+
+
+
+
 
 .container{
+    display: flex;
     position:absolute;
+    right: 0px;
+    top:0px;
     margin: 30px;
-    width:auto
+    width:auto;
+
 }
 
 .topnav{
     overflow:hidden;
-    background-color: #d0d2f1c8
+    
+    border-radius: 15pt;
+
 }
 .topnav a{
     float:left;
-    color: rgb(69, 60, 72);
+    background-color: #3f658035;
+    color: rgba(86, 9, 122, 0.998);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     font-family: cursive;
+    border: solid 3px;
+    border-radius: 20pt;
+    border-style:inset;
+    border-top: #ffffff;
+    border-bottom: #ffffff;
 }
 
 .topnav a:hover {
-    background-color: rgba(150, 194, 166, 0.557);
-    color:rgb(58, 79, 67);
+    background-color: rgba(74, 24, 161, 0.205);
+    color:rgb(206, 24, 151);
     
 }
 
 .topnav a:active {
-    background-color: rgba(93, 81, 106, 0.701);
-    color:rgb(174, 145, 152);
+    background-color: rgba(41, 209, 255, 0.292);
+    color:rgba(137, 79, 94, 0.836);
 }
 .title{
     font-family: Brush Script MT;
@@ -100,4 +203,21 @@
     padding-top: 1%;
     margin-right:60%; 
 }
-
+.CL{
+    display:flex;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transition: transform 0.5 ease-in;
+    width:3em;
+    -webkit-box-reflect: below .5px linear-gradient(transparent, #0008);
+    outline: none;
+    line-height:0em;
+    left: 0em
+}
+.LC:hover{
+    animation:animate 1s linear;
+    -webkit-box-reflect: below 6px linear-gradient(transparent, #0008);
+    transform:scale(1.1)
+}
