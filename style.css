@@ -103,7 +103,7 @@
     position:absolute;
     width: 70em;
     height: 12em;
-    top:6em;
+    top:8em;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -330,12 +330,20 @@
     -webkit-box-reflect: below .5px linear-gradient(transparent, #0008);
     outline: none;
     text-align: center;
-    justify-content: center;
+    justify-content: space-evenly;
     position: relative;
-    top:25em
+
+    
 }
 .email:hover{
     animation:animate 1s linear;
     -webkit-box-reflect: below 6px linear-gradient(transparent, #0008);
     transform:scale(1.1)
+}
+.contact{
+    display:flex;
+    position: relative;
+    top:30em;
+    width: 100em;
+    justify-content: space-evenly;
 }
