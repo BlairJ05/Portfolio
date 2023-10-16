@@ -270,16 +270,15 @@
     top:2em;
     margin: 30px;
     width:auto;
-
+    border-radius:4px;
 }
 
 .topnav{
-    overflow:hidden;
-    border-radius: 15pt;
+    position:relative;
+
 
 }
 .topnav a{
-    float:left;
     background-color: #3f658035;
     color: #a2cfec;
     text-align: center;
@@ -366,6 +365,34 @@
 .contact{
     display:flex;
     position: relative;
-    top:20em;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-between;
+    /* border: red solid 3px; */
+    box-shadow: 0px 0px 10px #838383;
+    height:155px;
+    color: #ffffff;
+    list-style: none;
+}
+.contact a{
+    color:white;
+    
+}
+.contact a:hover{
+    color:rgb(138, 127, 243);
+}
+.ftitems{
+    color:rgb(255, 255, 255);
+    border: red solid 3px;
+    
+
+}
+.ulcontact{
+    border: rgb(6, 126, 217) solid 3px;
+    display:flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: ;
+    list-style: none;
+    margin: 2em;
+    width:auto;
 }
