@@ -72,18 +72,8 @@ h1.aboutme {
     font-size: 30pt;
     text-decoration: underline;
     text-decoration-color: rgba(202, 164, 216, 0.817);
+    top: 35vw;
     
-}
-
-.wimages{
-    display:flex;
-    position:relative;
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
 }
 
 .scroll {
@@ -96,13 +86,14 @@ h1.aboutme {
     position:relative;
     display:flex;
     justify-items: center;
+
     /* border:red solid 3px; */
 }
 .bubbles span{
     display:flex;
     position: relative;
-    width:30px;
-    height:25px;
+    width:2vw;
+    height:2vw;
     background: rgb(57, 160, 230);
     margin: 0 4px;
     border-radius: 50%;
@@ -138,7 +129,8 @@ h1.aboutme {
     padding-top: 0px;
     color:rgb(255, 255, 255);
     font-size: 35pt;
-    position: relative; 
+    position: relative;
+    z-index: -1; 
     /* border: solid 2px rgb(0, 255, 47); */
 }
 
@@ -146,7 +138,6 @@ h1.aboutme {
     display: flex;
     justify-content: center;
     align-items: space-evenly;
-
     margin-bottom: 20%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 15pt;
@@ -157,102 +148,16 @@ h1.aboutme {
     bottom:5em;
     /* border: solid 2px blue; */
 }
-
-.projects{
-    display: flex;
-    position:relative;
-    width: 70em;
-    height: 12em;
-    top:8em;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.weather_app{
-    display: flex;
-    position:absolute;
-    width: auto;
-    height: auto;
-    top:0em;
-    left:5em;
-    flex-direction: row;
-    justify-content: space-evenly;
-    box-shadow: 0 0 10px #c6e8ff;
-}
-.list{
-    display: flex;
-    position:absolute;
-    width: auto;
-    height: auto;
-    top:0em;
-    left:25.5em;
-    flex-direction: row;
-    justify-content: space-evenly;
-    box-shadow: 0 0 10px #c6e8ff;
-}
-.char{
-    display: flex;
-    position:absolute;
-    width: auto;
-    height: auto;
-    top:0em;
-    left:44em;
-    flex-direction: row;
-    justify-content: space-evenly;
-    box-shadow: 0 0 10px #c6e8ff;
-}
-.copy{
-    display: flex;
-    position:absolute;
-    width: auto;
-    height: auto;
-    top:0em;
-    left:65em;
-    flex-direction: row;
-    justify-content: space-evenly;
-    box-shadow: 0 0 10px #c6e8ff;
-}
-.weather_app:hover .wimages {
-    opacity: 0.3;
-}
-.list:hover .wimages{
-    opacity: 0.3;
-}
-.char:hover .wimages{
-    opacity: 0.3;
-}
-.copy:hover .wimages{
-    opacity: 0.3;
-}
-.weather_app:hover .wmiddle,.list:hover .lmiddle,.char:hover .charmiddle,.copy:hover .copymiddle {
-    opacity: 1;
-}
-.wmiddle, .lmiddle, .charmiddle, .copymiddle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
-  }
-  .wtext,.ltext,.chartext,.coptext {
-    background-color: #814caf6a;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
 .bg-img{
     /* position:absolute; */
     background-color:transparent;
     color:transparent;
     min-height:150px;
-    top:-5em;
     background-position:center;
     background-size:cover;
     position: relative;
-    margin:50px;
     border:solid 3px transparent;
-    box-shadow: 1px 1px 40px #da93f0e3;
+    /* box-shadow: 1px 1px 40px #da93f0e3; */
     position: relative; 
     /*  */
 }
@@ -260,8 +165,8 @@ h1.aboutme {
     display:flex;
     align-items: center;
     justify-content: center;
-    width:100%;
-    height:400px;
+    width:100;
+    height:20vw;
 }
 .portfolio_header{
     height: 8em;
@@ -327,14 +232,21 @@ h1.aboutme {
     border-radius:4px;
 }
 .topnav{
-    /* position:relative; */
-    z-index: 4;
-    
+    display: flex;
+    position:relative;
+    justify-content: end;
+    align-items: center;
+    background-color: #000000;
+    height: 6vw;
+    top:-2vw;
+    width: 100vw;
+    gap: .5vw;
+
 
 
 }
 .topnav a{
-    background-color: #3f658035;
+    background-color: #3f65809e;
     color: #a2cfec;
     text-align: center;
     padding: 1vw 1.2vw;
@@ -346,7 +258,7 @@ h1.aboutme {
     border-top: #ffffff;
     border-bottom: #ffffff;
     grid-auto-rows: auto;
-    z-index: 1;
+
     
 
 }
@@ -356,9 +268,17 @@ h1.aboutme {
 .topnav a:hover {
     background-color: rgba(74, 24, 161, 0.205);
     color:rgb(206, 33, 203);
-    z-index: 0;
+    transition: ease-in .2s;
+
     
 }
+#darkmode:hover {
+    color:rgb(206, 33, 203);
+    transition: ease-in .2s;
+
+    
+}
+
 .white {
     background-color: rgb(255, 255, 255);
 }
@@ -559,36 +479,57 @@ a.active{
     -webkit-box-reflect: below 6px linear-gradient(transparent, #0008);
     transform:scale(1.1)
 }
-.contact{
-    display:flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    /* border: red solid 3px; */
-    box-shadow: 0px 0px 10px #838383;
-    height:155px;
-    color: #ffffff;
-    list-style: none;
-}
-.contact a{
-    color:white;
-    
-}
-.contact a:hover{
-    color:rgb(138, 127, 243);
-}
+
+
 .ftitems{
     color:rgb(255, 255, 255);
     border: red solid 3px;
     
 
 }
-.ulcontact{
-    border: rgb(6, 126, 217) solid 3px;
-    display:flex;
-    position: relative;
+
+footer{
+    margin-top: 10vw;
+    width: 100%;
+    height: 14vw;
+    position: absolute;
+    bottom: -500;
+    background: linear-gradient(to right, rgba(24, 59, 85, 0.184), #26182d39);
+    color: #fff;
+    padding: 100px 0 20px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    box-shadow: 0 0 10px rgb(49, 59, 73);
+}
+.row{
+    width:85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: space-between;
-    list-style: none;
-    margin: 2em;
-    width:auto;
+}
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+.logo{
+    position: absolute;
+    top:2vw;
+    left:3vw;
+    width: 200px;
+    height: 150px;
+    margin-bottom: 30px;
+}
+.contact {
+    font-size: 35pt;
+    position: absolute;
+    top:2.5vw;
+    left:44vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
+.contact_logo{
+    border-radius: 100%;
+    width: 6vw;
+}
