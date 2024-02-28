@@ -46,7 +46,7 @@ p.aboutme{
     border-radius: 100em;
     opacity: 0; 
     animation: fadeIn 2s forwards;
-    box-shadow: 0 10px 10px 10px rgba(193, 115, 221, 0.525); 
+    box-shadow: 0 10px 10px 10px rgba(107, 75, 119, 0.525); 
 }
 
 @keyframes fadeIn {
