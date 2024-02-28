@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const changeColorButton = document.querySelector("#changeColorButton");
+    
     changeColorButton.addEventListener("click", changeBackgroundColor);
     console.log("Button clicked");
 

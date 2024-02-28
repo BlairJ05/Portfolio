@@ -16,23 +16,63 @@
 
 }
 .aboutme{
-    display: flex;
-    justify-content: center;
-    text-align: center;
     font-size: 25pt;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding:0%;
+    margin-left: 10%;
+    margin-right: 10%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 15pt;
     background-color: rgba(0, 0, 0, 0.062);
     color:rgb(255, 255, 255);
-    position: relative; 
-    top:0em;
-    height:0em;
-    width:70em;
+    text-align: center;
+    width:40vw;
     /* border: red 3px solid; */
     line-height: 2.5;
+    position: absolute;
+    left: 37vw;
+    bottom:2vw;
+    
+
+}
+p.aboutme{
+        padding: 10%, 10%;
+
+}
+.MY_PIC{
+    position: relative;
+    height: 20vw;
+    width: 20vw;
+    left:6vw;
+    top:7vw;
+    border-radius: 100em;
+    opacity: 0; 
+    animation: fadeIn 2s forwards;
+    box-shadow: 0 10px 10px 10px rgba(193, 115, 221, 0.525); 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* Fade to full opacity */
+    }
+}
+.MY_PIC_container{
+    position: absolute;
+    left:15vw;
+    top:10vw;
+    color: white;
+    
+}
+h1.aboutme {
+    position: absolute;
+    font-family: "Sofia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30pt;
+    text-decoration: underline;
+    text-decoration-color: rgba(202, 164, 216, 0.817);
+    
 }
 
 .wimages{
@@ -71,6 +111,7 @@
     0 0 100px rgb(57, 160, 230);
     animation: bubble 10s linear infinite;
     animation-duration: calc(500s / var(--i));
+    z-index: -1;
     /* border:rgba(175, 146, 146, 0.253) solid 3px; */
 }
 @keyframes bubble{
@@ -213,7 +254,7 @@
     border:solid 3px transparent;
     box-shadow: 1px 1px 40px #da93f0e3;
     position: relative; 
-    z-index: 1;
+    /*  */
 }
 .box{
     display:flex;
@@ -222,26 +263,29 @@
     width:100%;
     height:400px;
 }
-.protfolio_header{
+.portfolio_header{
     height: 8em;
+
 }
 @font-face {
     font-family: myFirstFont;
     src: url(sansation_light.woff);
  }
 .name{
-  font-family:myFirstFont;
+  font-family: "Dancing Script", cursive;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
-  line-height: 0.95em;
-  font-weight: 800;
+  font-weight: 600;
+  font-style: normal;
+  font-optical-sizing: auto;
   animation: animate 20s linear infinite;
   color:#c6e8ff;
-  font-size: 45pt;
+  font-size: 60pt;
   text-transform: uppercase;
   background-color: rgba(16, 15, 15, 0.055);
   border-radius: 15px;
-  position: absolute;
-  top:3.5em
+  letter-spacing: 3vw;
+  z-index: -1;
+
 
 
 }
@@ -264,18 +308,29 @@
 
     }
 }
-.container{
-    display: flex;
-    position:absolute;
+.white .container{
+    display: table-row-group;
+    position:fixed;
     right: 0px;
-    top:2em;
+    top:1.5em;
+    margin: 30px;
+    width:auto;
+    border-radius:4px;
+    /* border: red 3px solid; */
+}
+.container{
+    display: table-row;
+    position:fixed;
+    right: 0px;
     margin: 30px;
     width:auto;
     border-radius:4px;
 }
-
 .topnav{
-    position:relative;
+    /* position:relative; */
+    z-index: 4;
+    background-color: #50245a;
+    
 
 
 }
@@ -283,15 +338,17 @@
     background-color: #3f658035;
     color: #a2cfec;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1vw 1.2vw;
     text-decoration: none;
-    font-size: 21px;
+    font-size: 1.5vw;
     font-family: cursive;
-    border: solid 3px;
     border-radius: 20pt;
     border-style:inset;
     border-top: #ffffff;
     border-bottom: #ffffff;
+    grid-auto-rows: auto;
+    z-index: 1;
+    
 
 }
 #changeColorButton{
@@ -300,18 +357,18 @@
 .topnav a:hover {
     background-color: rgba(74, 24, 161, 0.205);
     color:rgb(206, 33, 203);
+    z-index: 0;
     
 }
 .white {
     background-color: rgb(255, 255, 255);
 }
 
-.protfolio_header{
+.white .portfolio_header{
     background-color: rgba(183, 182, 182, 0.767);
-    
     border-bottom-left-radius: .4em;
     border-bottom-right-radius: .4em;
-    box-shadow: 0px 5px 5px rgba(98, 96, 96, 0.354);
+    box-shadow: 0px 5px 5px rgba(98, 96, 96, 0.339);
 }
 
 .white .text-size {
@@ -319,7 +376,13 @@
 }
 
 .white .aboutme {
-    color: black;
+    color: rgb(13, 13, 13);
+    bottom:-3vw;
+
+}
+
+.white h1.aboutme{
+    left:36vw;
 }
 
 .white .topnav a {
@@ -332,8 +395,8 @@
     border: none;
     top:0em;
     bottom:4em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 2vw;
+    padding-right: 2vw;
     letter-spacing: 2px;
 }
 #darkmode::content{
@@ -351,8 +414,12 @@
 .white .topnav a:active {
     color: #635592;
     background-color: #20384b5f;
+    /* border: rgb(0, 55, 255) 3px solid; */
 
 }
+a.active{
+    /* border: rgb(0, 55, 255) 3px solid; */
+} 
 .white .bg-img{
     background-color:transparent;
     color:transparent;
