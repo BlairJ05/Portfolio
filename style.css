@@ -99,8 +99,8 @@ h1.aboutme {
 .bubbles span{
     display:flex;
     position: relative;
-    width:2vw;
-    height:2vw;
+    width:1vw;
+    height:1vw;
     background: rgb(57, 160, 230);
     margin: 0 4px;
     border-radius: 50%;
@@ -171,9 +171,7 @@ h1.aboutme {
     background-size:cover;
     position: relative;
     border:solid 3px transparent;
-    /* box-shadow: 1px 1px 40px #da93f0e3; */
     position: relative; 
-    /*  */
 }
 
 .box{
@@ -346,7 +344,7 @@ h1.aboutme {
     -webkit-box-reflect: below 8px linear-gradient(transparent, rgba(0, 0, 0, 0.32));
     outline: none;
     justify-content: space-evenly;
-    /* z-index: -1; */
+    z-index: -1;
 }
 
 .lang_image :hover{
@@ -366,10 +364,53 @@ h1.aboutme {
     -webkit-box-reflect: below .5px linear-gradient(transparent, #0008);
     outline: none;
     text-align: center;
-    justify-content: space-evenly; 
+    position: relative;
+    right: 10vw;
 }
 
 .email:hover{
+    animation:animate 1s linear;
+    -webkit-box-reflect: below 6px linear-gradient(transparent, #0008);
+    transform:scale(1.1)
+}
+
+
+/* Phone */
+.phone_num{
+    display:flex;
+    border-radius: 60%;
+    transition: transform 0.5 ease-in;
+    width:16vw;
+    height:4vw;
+    outline: none;
+    text-align: center;
+    justify-content: space-evenly;
+    position: relative;
+    left: 23vw; 
+    bottom: 4vw;
+    font-size: 18pt;
+}
+.phone_num:hover{
+    animation:animate 1s linear;
+    transform:scale(1.1)
+}
+
+
+/* LinkedIn */
+.linkedIn{
+    display:flex;
+    border-radius: 50%;
+    transition: transform 0.5 ease-in;
+    width:4vw;
+    height:4vw;
+    -webkit-box-reflect: below .5px linear-gradient(transparent, #0008);
+    outline: none;
+    text-align: center;
+    position: relative;
+    right: 10vw;
+}
+
+.linkedIn:hover{
     animation:animate 1s linear;
     -webkit-box-reflect: below 6px linear-gradient(transparent, #0008);
     transform:scale(1.1)
@@ -393,7 +434,7 @@ footer{
 }
 
 .row{
-    width:85%;
+    width:30%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
