@@ -1,9 +1,9 @@
-*
-{
+*{
     margin: 0;
     padding:0;
     box-sizing: border-box;
 }
+
 .background{
     width: 100%;
     height: 100%;
@@ -11,10 +11,11 @@
     box-sizing: border-box;
     background-color:rgb(0, 0, 0);
     background-size: cover;
-    /* z-index: index 200; */
-    /* border: red 3px solid; */
 
 }
+
+
+/* About Me */
 .aboutme{
     font-size: 25pt;
     margin-left: 10%;
@@ -30,13 +31,27 @@
     position: absolute;
     left: 37vw;
     bottom:2vw;
-    
-
 }
+
 p.aboutme{
         padding: 10%, 10%;
 
 }
+
+h1.aboutme {
+    position: absolute;
+    font-family: "Sofia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30pt;
+    text-decoration: underline;
+    text-decoration-color: rgba(202, 164, 216, 0.817);
+    top: 35vw;
+    z-index: -1; 
+}
+
+
+/* My Picture */
 .MY_PIC{
     position: relative;
     height: 20vw;
@@ -57,6 +72,7 @@ p.aboutme{
         opacity: 1; /* Fade to full opacity */
     }
 }
+
 .MY_PIC_container{
     position: absolute;
     left:15vw;
@@ -64,31 +80,22 @@ p.aboutme{
     color: white;
     
 }
-h1.aboutme {
-    position: absolute;
-    font-family: "Sofia", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 30pt;
-    text-decoration: underline;
-    text-decoration-color: rgba(202, 164, 216, 0.817);
-    top: 35vw;
-    
-}
 
+
+/* Scroll */
 .scroll {
     scroll-behavior:smooth;
 
 }
 
-.bubbles
-{
+
+/* Bubbles */
+.bubbles{
     position:relative;
     display:flex;
     justify-items: center;
-
-    /* border:red solid 3px; */
 }
+
 .bubbles span{
     display:flex;
     position: relative;
@@ -101,10 +108,10 @@ h1.aboutme {
     0 0 50px rgb(57, 160, 230),
     0 0 100px rgb(57, 160, 230);
     animation: bubble 10s linear infinite;
-    animation-duration: calc(500s / var(--i));
+    animation-duration: calc(600s / var(--i));
     z-index: -1;
-    /* border:rgba(175, 146, 146, 0.253) solid 3px; */
 }
+
 @keyframes bubble{
     0%{
         transform:translateY(50vh) scale(0)
@@ -113,6 +120,7 @@ h1.aboutme {
         transform:translateY(1vh) scale(1)
     }
 }
+
 .bubbles span:nth-child(even){
     background: rgb(212, 88, 250);
     box-shadow:0 0 0 10px rgb(64, 8, 88),
@@ -120,7 +128,9 @@ h1.aboutme {
     0 0 100px rgb(212, 88, 250);
 }
 
-.text-size {
+
+/* Title Texts */
+.projects {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,10 +138,11 @@ h1.aboutme {
     margin-top: 0em;
     padding-top: 0px;
     color:rgb(255, 255, 255);
-    font-size: 35pt;
+    font-size: 45pt;
     position: relative;
     z-index: -1; 
-    /* border: solid 2px rgb(0, 255, 47); */
+    font-weight: 100;
+    letter-spacing: .1vw;
 }
 
 .paragraph{
@@ -144,10 +155,13 @@ h1.aboutme {
     background-color: rgba(0, 0, 0, 0.062);
     color:rgb(255, 255, 255);
     position: relative; 
-    top:5em;
+    top:10vw;
     bottom:5em;
-    /* border: solid 2px blue; */
+    z-index: 1; 
 }
+
+
+/* Background */
 .bg-img{
     /* position:absolute; */
     background-color:transparent;
@@ -161,6 +175,7 @@ h1.aboutme {
     position: relative; 
     /*  */
 }
+
 .box{
     display:flex;
     align-items: center;
@@ -168,14 +183,22 @@ h1.aboutme {
     width:100;
     height:20vw;
 }
+
+
+/* Header */
 .portfolio_header{
     height: 8em;
-
 }
+
+
+/* Font */
 @font-face {
     font-family: myFirstFont;
     src: url(sansation_light.woff);
  }
+
+
+ /* Big Name */
 .name{
   font-family: "Dancing Script", cursive;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
@@ -194,6 +217,7 @@ h1.aboutme {
 
 
 }
+
 @keyframes animate{
     50%,50%,50%
     {
@@ -213,16 +237,9 @@ h1.aboutme {
 
     }
 }
-.white .container{
-    display: table-row-group;
-    position:fixed;
-    right: 0px;
-    top:1.5em;
-    margin: 30px;
-    width:auto;
-    border-radius:4px;
-    /* border: red 3px solid; */
-}
+
+
+/* Top Navigation Bar */
 .container{
     display: table-row;
     position:fixed;
@@ -231,6 +248,7 @@ h1.aboutme {
     width:auto;
     border-radius:4px;
 }
+
 .topnav{
     display: flex;
     position:relative;
@@ -244,7 +262,9 @@ h1.aboutme {
 
 
 
+
 }
+
 .topnav a{
     background-color: #3f65809e;
     color: #a2cfec;
@@ -259,12 +279,12 @@ h1.aboutme {
     border-bottom: #ffffff;
     grid-auto-rows: auto;
 
-    
-
 }
+
 #changeColorButton{
     border:none;
 }
+
 .topnav a:hover {
     background-color: rgba(74, 24, 161, 0.205);
     color:rgb(206, 33, 203);
@@ -272,12 +292,144 @@ h1.aboutme {
 
     
 }
+
 #darkmode:hover {
     color:rgb(206, 33, 203);
     transition: ease-in .2s;
 
     
 }
+
+.topnav a:active {
+    background-color: rgba(41, 209, 255, 0.292);
+    color:rgba(137, 79, 94, 0.836);
+}
+
+
+/* Skills */
+.skill h1{
+    display: flex;
+    position: relative;
+    font-size: 45pt;
+    top:1vw;
+    color: white;
+    justify-content: center;
+    z-index: -1;
+    font-family: "Sofia", cursive;
+    font-weight: 100;
+    letter-spacing: .1vw;
+}
+
+.lang{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90vw;
+
+
+}
+
+.title{
+    font-family: Brush Script MT;
+    font-size: 20pt;
+    padding-top: 1%;
+    margin-right:60%; 
+}
+
+.lang_image{
+    display:flex;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in;
+    width:5vw;
+    height:5vw;
+    -webkit-box-reflect: below 8px linear-gradient(transparent, rgba(0, 0, 0, 0.32));
+    outline: none;
+    justify-content: space-evenly;
+    /* z-index: -1; */
+}
+
+.lang_image :hover{
+    animation:animate 1s linear;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, #0008);
+    transform:scale(1.1);
+    width:20vw;
+}
+
+/* Email */
+.email{
+    display:flex;
+    border-radius: 50%;
+    transition: transform 0.5 ease-in;
+    width:4vw;
+    height:4vw;
+    -webkit-box-reflect: below .5px linear-gradient(transparent, #0008);
+    outline: none;
+    text-align: center;
+    justify-content: space-evenly; 
+}
+
+.email:hover{
+    animation:animate 1s linear;
+    -webkit-box-reflect: below 6px linear-gradient(transparent, #0008);
+    transform:scale(1.1)
+}
+
+
+/* Footer */
+footer{
+    margin-top: 10vw;
+    width: 100%;
+    height: 14vw;
+    position: absolute;
+    bottom: -500;
+    background: linear-gradient(to right, rgba(24, 59, 85, 0.184), #26182d39);
+    color: #fff;
+    padding: 100px 0 20px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    box-shadow: 0 0 10px rgb(49, 59, 73);
+}
+
+.row{
+    width:85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.logo{
+    position: absolute;
+    top:2vw;
+    left:3vw;
+    width: 200px;
+    height: 150px;
+    margin-bottom: 30px;
+}
+
+.contact {
+    font-size: 35pt;
+    position: absolute;
+    top:2.5vw;
+    left:44vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+
+.contact_logo{
+    border-radius: 100%;
+    width: 6vw;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////// WHITE MODE ////////////////////////////////////////////////////////////////////////// */
 
 .white {
     background-color: rgb(255, 255, 255);
@@ -290,7 +442,7 @@ h1.aboutme {
     box-shadow: 0px 5px 5px rgba(98, 96, 96, 0.339);
 }
 
-.white .text-size {
+.white .projects{
     color: rgb(0, 0, 0);
 }
 
@@ -318,12 +470,21 @@ h1.aboutme {
     padding-right: 2vw;
     letter-spacing: 2px;
 }
-#darkmode::content{
-    content: "Wow";
-}
+
 .white .topnav a:hover {
     color: #50245a;
     background-color: #868b8ee1;
+}
+
+.white .container{
+    display: table-row-group;
+    position:fixed;
+    right: 0px;
+    top:1.5em;
+    margin: 30px;
+    width:auto;
+    border-radius:4px;
+    /* border: red 3px solid; */
 }
 
 #changeColorButton{
@@ -336,9 +497,7 @@ h1.aboutme {
     /* border: rgb(0, 55, 255) 3px solid; */
 
 }
-a.active{
-    /* border: rgb(0, 55, 255) 3px solid; */
-} 
+
 .white .bg-img{
     background-color:transparent;
     color:transparent;
@@ -366,9 +525,6 @@ a.active{
     height: 1.2em;
     font-weight: 500;
     font-style: bold;
-    /* justify-content:center ; */
-
-    /* border: solid rgb(255, 11, 11) 2px; */
 }
 
 @keyframes whiteTheme {
@@ -387,6 +543,7 @@ a.active{
         0 0 160px #03bcf4,
     }
 }
+
 .white .bubbles span{
     position: relative;
     width:30px;
@@ -409,127 +566,10 @@ a.active{
         transform:translateY(1vh) scale(1)
     }
 }
+
 .white .bubbles span:nth-child(even){
     background: rgba(142, 222, 139, 0.349);
     box-shadow:0 0 0 10px rgba(191, 224, 190, 0.724),
     0 0 50px rgb(12, 255, 4),
     0em 0px 100px rgb(12, 255, 4);
-}
-
-.lang{
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 66em;
-
-
-}
-.topnav a:active {
-    background-color: rgba(41, 209, 255, 0.292);
-    color:rgba(137, 79, 94, 0.836);
-}
-.title{
-    font-family: Brush Script MT;
-    font-size: 20pt;
-    padding-top: 1%;
-    margin-right:60%; 
-}
-.CL{
-    display:flex;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    transition: transform 0.5 ease-in;
-    width:4.5em;
-    -webkit-box-reflect: below .5px linear-gradient(transparent, rgba(0, 0, 0, 0.826));
-    outline: none;
-    left: 0em;
-    justify-content: space-evenly;
-    position: relative;
-    row-gap: 50.4rem;
-    flex-direction: row;
-
-}
-.CL:hover{
-    animation:animate 1s linear;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
-    transform:scale(1.1)
-}
-.email{
-    display:flex;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    transition: transform 0.5 ease-in;
-    width:4em;
-    height:4em;
-    -webkit-box-reflect: below .5px linear-gradient(transparent, #0008);
-    outline: none;
-    text-align: center;
-    justify-content: space-evenly;
-    position: relative;
-
-    
-}
-.email:hover{
-    animation:animate 1s linear;
-    -webkit-box-reflect: below 6px linear-gradient(transparent, #0008);
-    transform:scale(1.1)
-}
-
-
-.ftitems{
-    color:rgb(255, 255, 255);
-    border: red solid 3px;
-    
-
-}
-
-footer{
-    margin-top: 10vw;
-    width: 100%;
-    height: 14vw;
-    position: absolute;
-    bottom: -500;
-    background: linear-gradient(to right, rgba(24, 59, 85, 0.184), #26182d39);
-    color: #fff;
-    padding: 100px 0 20px;
-    border-top-left-radius: 125px;
-    font-size: 13px;
-    line-height: 20px;
-    box-shadow: 0 0 10px rgb(49, 59, 73);
-}
-.row{
-    width:85%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.col{
-    flex-basis: 25%;
-    padding: 10px;
-}
-.logo{
-    position: absolute;
-    top:2vw;
-    left:3vw;
-    width: 200px;
-    height: 150px;
-    margin-bottom: 30px;
-}
-.contact {
-    font-size: 35pt;
-    position: absolute;
-    top:2.5vw;
-    left:44vw;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} 
-.contact_logo{
-    border-radius: 100%;
-    width: 6vw;
 }
