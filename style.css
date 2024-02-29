@@ -56,7 +56,7 @@ h1.aboutme {
     position: relative;
     height: 20vw;
     width: 20vw;
-    left:6vw;
+    left:12vw;
     top:7vw;
     border-radius: 100em;
     opacity: 0; 
@@ -102,7 +102,7 @@ h1.aboutme {
     width:1vw;
     height:1vw;
     background: rgb(57, 160, 230);
-    margin: 0 4px;
+    margin: 0 11.5px;
     border-radius: 50%;
     box-shadow:0 0 0 10px rgb(11, 40, 65),
     0 0 50px rgb(57, 160, 230),
@@ -143,6 +143,9 @@ h1.aboutme {
     z-index: -1; 
     font-weight: 100;
     letter-spacing: .1vw;
+    left: 1vw;
+    text-decoration: underline;
+    text-decoration-color: rgba(202, 164, 216, 0.817);
 }
 
 .paragraph{
@@ -155,9 +158,9 @@ h1.aboutme {
     background-color: rgba(0, 0, 0, 0.062);
     color:rgb(255, 255, 255);
     position: relative; 
-    top:10vw;
+    top:6vw;
     bottom:5em;
-    z-index: 1; 
+    z-index: -1; 
 }
 
 
@@ -178,7 +181,7 @@ h1.aboutme {
     display:flex;
     align-items: center;
     justify-content: center;
-    width:100;
+    width:100%;
     height:20vw;
 }
 
@@ -242,7 +245,7 @@ h1.aboutme {
     display: table-row;
     position:fixed;
     right: 0px;
-    margin: 30px;
+    margin-top: 30px;
     width:auto;
     border-radius:4px;
 }
@@ -252,19 +255,14 @@ h1.aboutme {
     position:relative;
     justify-content: end;
     align-items: center;
-    background-color: #000000;
     height: 6vw;
     top:-2vw;
     width: 100vw;
     gap: .5vw;
-
-
-
-
 }
 
 .topnav a{
-    background-color: #3f65809e;
+    background-color: #253c4c;
     color: #a2cfec;
     text-align: center;
     padding: 1vw 1.2vw;
@@ -284,7 +282,7 @@ h1.aboutme {
 }
 
 .topnav a:hover {
-    background-color: rgba(74, 24, 161, 0.205);
+    background-color: rgb(27, 15, 47);
     color:rgb(206, 33, 203);
     transition: ease-in .2s;
 
@@ -313,9 +311,11 @@ h1.aboutme {
     color: white;
     justify-content: center;
     z-index: -1;
-    font-family: "Sofia", cursive;
     font-weight: 100;
     letter-spacing: .1vw;
+    left: 1vw;
+    text-decoration: underline;
+    text-decoration-color: rgba(202, 164, 216, 0.817);
 }
 
 .lang{
@@ -344,7 +344,6 @@ h1.aboutme {
     -webkit-box-reflect: below 8px linear-gradient(transparent, rgba(0, 0, 0, 0.32));
     outline: none;
     justify-content: space-evenly;
-    z-index: -1;
 }
 
 .lang_image :hover{
@@ -389,6 +388,7 @@ h1.aboutme {
     left: 23vw; 
     bottom: 4vw;
     font-size: 18pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .phone_num:hover{
     animation:animate 1s linear;
@@ -449,10 +449,10 @@ footer{
 
 .logo{
     position: absolute;
-    top:2vw;
+    top:1vw;
     left:3vw;
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
     margin-bottom: 30px;
 }
 
