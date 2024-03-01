@@ -6,7 +6,7 @@
 }
 
 .background{
-    width: 100%;
+    max-width: 98.11vw;
     height: 100%;
     overflow: cover; 
     box-sizing: border-box;
@@ -90,7 +90,15 @@ h1.aboutme {
 
 }
 
+#project{
+    position: absolute;
+    top: 85vw;
+}
 
+#skill{
+    position: absolute;
+    top: 60vw;
+}
 /* Bubbles */
 .bubbles{
     position:relative;
@@ -106,9 +114,9 @@ h1.aboutme {
     background: rgb(57, 160, 230);
     margin: 0 11.5px;
     border-radius: 50%;
-    box-shadow:0 0 0 10px rgb(11, 40, 65),
-    0 0 50px rgb(57, 160, 230),
-    0 0 100px rgb(57, 160, 230);
+    box-shadow:0 0 0 9px rgb(13, 45, 73),
+    0 0 50px rgb(61, 177, 255),
+    0 0 100px rgb(65, 179, 255);
     animation: bubble 10s linear infinite;
     animation-duration: calc(600s / var(--i));
     z-index: -1;
@@ -242,14 +250,6 @@ h1.aboutme {
 
 
 /* Top Navigation Bar */
-/* .container{
-    display: table-row;
-    position:fixed;
-    margin-top: 30px;
-    border-radius:4px;
-    border: red 3px solid;
-    align-items: center;
-} */
 
 .topnav{
     display: flex;
@@ -258,11 +258,10 @@ h1.aboutme {
     align-items: center;
     height: 6vw;
     top: 1vw;
-    right: 1vw;
     width: 100vw;
     gap: .5vw;
-    z-index: index 2;
-    /* border: red 3px solid; */
+    z-index: 2;
+    /* border: red 3px solid; */ 
 }
 
 .topnav a{
@@ -278,7 +277,7 @@ h1.aboutme {
     border-top: #ffffff;
     border-bottom: #ffffff;
     grid-auto-rows: auto;
-    z-index: index 2;
+    z-index: 2;
     /* border: red 3px solid; */
 }
 
@@ -304,6 +303,7 @@ h1.aboutme {
 .topnav a:active {
     background-color: rgba(41, 209, 255, 0.292);
     color:rgba(137, 79, 94, 0.836);
+    z-index: 2;
 }
 
 
@@ -329,8 +329,7 @@ h1.aboutme {
     flex-direction: row;
     justify-content: space-evenly;
     width: 90vw;
-
-
+    z-index: 1;
 }
 
 .title{
@@ -349,6 +348,7 @@ h1.aboutme {
     -webkit-box-reflect: below 8px linear-gradient(transparent, rgba(0, 0, 0, 0.32));
     outline: none;
     justify-content: space-evenly;
+    z-index: -1;
 }
 
 .lang_image:hover{
@@ -461,8 +461,8 @@ footer{
     margin-top: 10vw;
     width: 100%;
     height: 15vw;
-    position: absolute;
-    bottom:-135vw;
+    position: relative;
+    bottom:0vw;
     background: linear-gradient(to right, rgba(24, 59, 85, 0.184), #26182d39);
     color: #fff;
     padding: 100px 0 20px;
@@ -490,8 +490,7 @@ footer{
     top:3vw;
     left:3vw;
     width: 250px;
-    height: 200px;
-    margin-bottom: 30px;
+    height: 160px;
 }
 
 .contact {
@@ -512,7 +511,6 @@ footer{
 .card {
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     position: relative;
     margin: 0px 10vw;
@@ -530,18 +528,21 @@ footer{
     /* background-color: #b6b2d5; */
     text-align: center;
     padding: 2px 16px;
-    color: white;
+    color: rgb(255, 255, 255);
     width: 21vw;
     position: relative;
     opacity: .7;
     transition: 0.3s;
     z-index: 1;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
+
 }
 
 .container1:hover{
     animation:animate 1s linear;
     opacity: 1;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.373);
 }
 
 .container1 h4, p{
@@ -563,18 +564,20 @@ footer{
 }
 
 .container1 img{
+    padding-top: 1.5vw;
     border-radius: 5%;
     height: 10vw;
 }
 
 .container1 button{
-    border-radius: 15%;
+    border-radius: 5.5%;
     width: 8vw;
     height: 3vw;
-    background-color: rgb(115, 217, 174);
-    transition: transform .5s;
+    background-color: rgb(154, 247, 202);
+    transition: transform .3s;
     margin-top: 3%;
     font-size: 20pt;
+    margin-bottom: 3%;
 }
 
 .container1 button:hover{
@@ -588,25 +591,56 @@ footer{
     background-color: rgb(255, 255, 255);
 }
 
-.white .portfolio_header{
-    background-color: rgba(183, 182, 182, 0.767);
+.white .projects{
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+}
+
+.white .aboutme{
+    font-size: 25pt;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15pt;
+    background-color: transparent;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    width:40vw;
+    /* border: red 3px solid; */
+    line-height: 2.5;
+    position: absolute;
+    left: 37vw;
+    bottom:-2vw;
+    z-index: -1;
+}
+
+.white h1.aboutme {
+    position: absolute;
+    font-family: "Sofia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30pt;
+    text-decoration: underline;
+    text-decoration-color: rgba(202, 164, 216, 0.817);
+    top: 43vw;
+    z-index: -1; 
+}
+
+.white p.aboutme{
+    padding: 10%, 10%;
+}
+
+.white .topnav{
+    background-color: rgb(255, 255, 255);
     border-bottom-left-radius: .4em;
     border-bottom-right-radius: .4em;
     box-shadow: 0px 5px 5px rgba(98, 96, 96, 0.339);
-}
-
-.white .projects{
-    color: rgb(0, 0, 0);
-}
-
-.white .aboutme {
-    color: rgb(13, 13, 13);
-    bottom:-3vw;
-
-}
-
-.white h1.aboutme{
-    left:36vw;
+    width: 100vw;
+    height: 6.5vw;
+    /* border: red 3px solid; */
+    margin: 0vw;
+    top: 0vw;
+    z-index: 2;
 }
 
 .white .topnav a {
@@ -622,6 +656,7 @@ footer{
     padding-left: 2vw;
     padding-right: 2vw;
     letter-spacing: 2px;
+    /* border: red 3px solid; */
 }
 
 .white .topnav a:hover {
@@ -629,26 +664,14 @@ footer{
     background-color: #868b8ee1;
 }
 
-.white .container{
-    display: table-row-group;
-    position:fixed;
-    right: 0px;
-    top:1.5em;
-    margin: 30px;
-    width:auto;
-    border-radius:4px;
-    /* border: red 3px solid; */
-}
-
 #changeColorButton{
     background-color: transparent;
+    height: 4vw;
 }
 
 .white .topnav a:active {
     color: #635592;
     background-color: #20384b5f;
-    /* border: rgb(0, 55, 255) 3px solid; */
-
 }
 
 .white .bg-img{
@@ -663,7 +686,7 @@ footer{
     border:solid 3px transparent;
     box-shadow: 1px 1px 40px #60636379;
     position: relative; 
-    z-index: 1;
+    z-index: -1;
 }
 
 .white .name {
@@ -678,6 +701,8 @@ footer{
     height: 1.2em;
     font-weight: 500;
     font-style: bold;
+    z-index: -1;
+    
 }
 
 @keyframes whiteTheme {
@@ -702,13 +727,14 @@ footer{
     width:30px;
     height:25px;
     background: rgba(174, 223, 237, 0.557);
-    margin: 0 4px;
+    margin: 35px 4px;
     border-radius: 50%;
     box-shadow:0 0 0 10px rgba(142, 181, 231, 0.322),
     0 0 50px rgb(57, 160, 230),
     0 0 100px rgb(57, 160, 230);
     animation: bubbly 10s linear infinite;
     animation-duration: calc(420s / var(--i));
+    
 }
 
 @keyframes bubbly{
@@ -716,7 +742,7 @@ footer{
         transform:translateY(50vh) scale(0)
     }
     100%{
-        transform:translateY(1vh) scale(1)
+        transform:translateY(1vh) scale(.6)
     }
 }
 
@@ -725,4 +751,57 @@ footer{
     box-shadow:0 0 0 10px rgba(191, 224, 190, 0.724),
     0 0 50px rgb(12, 255, 4),
     0em 0px 100px rgb(12, 255, 4);
+}
+
+.white .skill h1{
+    display: flex;
+    position: relative;
+    font-size: 45pt;
+    top:1vw;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    z-index: -1;
+    font-weight: 100;
+    letter-spacing: .1vw;
+    left: 1vw;
+    text-decoration: underline;
+    text-decoration-color: rgba(202, 164, 216, 0.817);
+}
+
+.white .phone_num{
+    background-color: #926a9a38;
+    border-color: transparent;
+    box-shadow: 0 0 5px #000000;
+}
+
+.white .contact{
+    color: #3a3939;
+}
+
+.white .linkedIn{
+    border-color: transparent;
+    box-shadow: 0 0 5px #000000;
+}
+
+.white .logo{
+    background-color: #403545c1;
+    border-radius: 20%;
+    box-shadow: 0 0 5px #000000;
+}
+
+.white .container1 h4, .white .container1 p{
+    color: rgb(0, 0, 0);
+}
+
+.white .lang_image{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.485);
+    
+}
+
+.bubbles span{
+
+}
+
+.white .container1{
+    z-index: 1;
 }

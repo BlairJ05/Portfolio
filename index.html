@@ -14,19 +14,15 @@
         <meta name="viewport" content="width=device-width, height=device-height">
     </head>
     <body class="background">
-        <header class="portfolio_header">
-            <div class="container">
-                
-                <div class="topnav">
-                    
-                    <a class="active" href="#home">Home</a>
-                    <a class="active" href="#aboutme">About Me</a>
-                    <a class="active" href="#skill">Skills</a>
-                    <a class="active" href="#project">Projects</a>
-                    <a class="active" href="#contact">Contact Me</a>
-                    <button id="changeColorButton"><a id="darkmode" class="active">Light Mode</a></button>
-                </div>
-            </div> 
+        <header class="portfolio_header">                
+            <div class="topnav">      
+                <a class="active" href="#home">Home</a>
+                <a class="active" href="#aboutme">About Me</a>
+                <a class="active" href="#skill">Skills</a>
+                <a class="active" href="#project">Projects</a>
+                <a class="active" href="#contact">Contact Me</a>
+                <button id="changeColorButton"><a id="darkmode" class="active">Light Mode</a></button>
+            </div>
         </header>
         
             <div class="bg-img" >
@@ -91,32 +87,34 @@
                     </div>  -->
                 </div>
             </div>
-            <div class="MY_PIC_containter">
+            <div id="aboutme" class="MY_PIC_containter">
                 <img class="MY_PIC" src="images/MyPic.jpg" alt="MyPic">
             </div> 
             
-            <div id="aboutme" class="Heading">
+            <div  class="Heading">
                 <h1 class="aboutme">About Me</h1> 
             </div> 
             <div class="paragraph">
                     <p class="aboutme">My name is Blair Johnson and I am currently attending Base Camp Coding Academy. When I graduate BCCA with a certificate  I will be skilled in Python, HTML, CSS, Django, Javascript and more. I plan on going to college and study cybersecurity or get a job in computer programming. </p>
             </div>
+            <div id="skill" ></div>
             <div class="skill">
                 <h1>Skills</h1>
             </div>
             <div class="paragraph">
                     <div class="lang">
-                        <img class="lang_image" src="images/Python(1).jpeg" alt="Python">
-                        <img class="lang_image" src="images/java.png" alt="Javascript">
-                        <img class="lang_image" src="images/git.jpeg" alt="Git">
-                        <img class="lang_image" src="images/Spring.png" alt="Spring">
-                        <img class="lang_image" src="images/django.png" alt="Django">
-                        <img class="lang_image" src="images/HTML.jpeg" alt="HTML">
-                        <img class="lang_image" src="images/CSS.jpg" alt="CSS">
-                        <img class="lang_image" src="images/SQL.jpg" alt="Mysql">
+                        <a href="https://www.w3schools.com/python/python_intro.asp" target="_blank"><img class="lang_image" src="images/Python(1).jpeg" alt="Python"></a>
+                        <a href="https://www.w3schools.com/java/" target="_blank"><img class="lang_image" src="images/java.png" alt="Javascript"></a>
+                        <a href="https://www.w3schools.com/git/default.asp" target="_blank"><img class="lang_image" src="images/git.jpeg" alt="Git"></a>
+                        <a href="https://www.techtarget.com/searchapparchitecture/definition/Spring-Framework" target="_blank"><img class="lang_image" src="images/Spring.png" alt="Spring"></a>
+                        <a href="https://www.w3schools.com/django/index.php" target="_blank"><img class="lang_image" src="images/django.png" alt="Django"></a>
+                        <a href="https://www.bing.com/ck/a?!&&p=c28380423631b9deJmltdHM9MTcwOTI1MTIwMCZpZ3VpZD0yYmMxODhlMS1lZGYwLTZlYzYtMjI1Mi05Y2Q0ZWM4ZTZmMGQmaW5zaWQ9NTIzMg&ptn=3&ver=2&hsh=3&fclid=2bc188e1-edf0-6ec6-2252-9cd4ec8e6f0d&psq=what+is+html&u=a1aHR0cHM6Ly93d3cudzNzY2hvb2xzLmNvbS9odG1sL2h0bWxfaW50cm8uYXNw&ntb=1" target="_blank"><img class="lang_image" src="images/HTML.jpeg" alt="HTML"></a>
+                        <a href="https://www.bing.com/ck/a?!&&p=3c238828ebdf2b78JmltdHM9MTcwOTI1MTIwMCZpZ3VpZD0yYmMxODhlMS1lZGYwLTZlYzYtMjI1Mi05Y2Q0ZWM4ZTZmMGQmaW5zaWQ9NTI1Nw&ptn=3&ver=2&hsh=3&fclid=2bc188e1-edf0-6ec6-2252-9cd4ec8e6f0d&psq=what+is+css&u=a1aHR0cHM6Ly93d3cudzNzY2hvb2xzLmNvbS9Dc3MvY3NzX2ludHJvLmFzcA&ntb=1" target="_blank"><img class="lang_image" src="images/CSS.jpg" alt="CSS"></a>
+                        <a href="https://www.w3schools.com/sql/sql_intro.asp" target="_blank"><img class="lang_image" src="images/SQL.jpg" alt="Mysql"></a>
                 </div>    
-            </div>            
-            <div>
+            </div>
+            <div id="project"></div>            
+            <div >
                 <h1 class="projects">Projects</h1>
             </div>
             <div class="card">
@@ -149,7 +147,7 @@
 
             <!-- This Is Where Projects Will Go. (Finish Before Friday!!!) -->
 
-        <footer>
+        <footer id="contact">
             <div class="row">
                 <div class="col">
                     <img class="logo" src="images/logo.png"  alt="Logo">
