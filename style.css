@@ -278,6 +278,8 @@ h1.aboutme {
     border-bottom: #ffffff;
     grid-auto-rows: auto;
     z-index: 2;
+    position: relative;
+    right: 2.5vw;
     /* border: red 3px solid; */
 }
 
@@ -641,6 +643,7 @@ footer{
     margin: 0vw;
     top: 0vw;
     z-index: 2;
+    
 }
 
 .white .topnav a {
@@ -656,6 +659,7 @@ footer{
     padding-left: 2vw;
     padding-right: 2vw;
     letter-spacing: 2px;
+    right: 2vw;
     /* border: red 3px solid; */
 }
 
