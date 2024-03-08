@@ -31,7 +31,7 @@
     line-height: 2.5;
     position: absolute;
     left: 37vw;
-    bottom:2vw;
+    bottom:0vw;
     z-index: -1;
 }
 
@@ -45,7 +45,7 @@ h1.aboutme {
     font-family: "Sofia", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 30pt;
+    font-size: 35pt;
     text-decoration: underline;
     text-decoration-color: rgba(202, 164, 216, 0.817);
     top: 35vw;
@@ -92,7 +92,7 @@ h1.aboutme {
 
 #project{
     position: absolute;
-    top: 85vw;
+    top: 90vw;
 }
 
 #skill{
@@ -156,6 +156,7 @@ h1.aboutme {
     left: 1vw;
     text-decoration: underline;
     text-decoration-color: rgba(202, 164, 216, 0.817);
+    font-family: "Sofia", cursive;
 }
 
 .paragraph{
@@ -323,6 +324,7 @@ h1.aboutme {
     left: 1vw;
     text-decoration: underline;
     text-decoration-color: rgba(202, 164, 216, 0.817);
+    font-family: "Sofia", cursive;
 }
 
 .lang{
@@ -332,6 +334,7 @@ h1.aboutme {
     justify-content: space-evenly;
     width: 90vw;
     z-index: 1;
+    top: 2vw;
 }
 
 .title{
@@ -363,14 +366,13 @@ h1.aboutme {
 .email{
     display:flex;
     transition: transform 0.5 ease-in;
-    width:6vw;
-    height:5vw;
+    width:8.5vw;
+    height:6vw;
     -webkit-box-reflect: below .5px linear-gradient(transparent, #0008);
     outline: none;
     text-align: center;
     position: relative;
-    right: 15vw;
-    top: .9vw;
+    right: 10.5vw;
 }
 
 .email:hover{
@@ -407,48 +409,59 @@ h1.aboutme {
 
 
 /* Phone */
-.phone_num{
+.git{
     display:flex;
     /* border-radius: 60%; */
     transition: transform 0.5 ease-in;
-    width:20vw;
-    height:3vw;
     outline: none;
     text-align: center;
     justify-content: space-evenly;
     position: absolute;
     -webkit-box-reflect: below 5px linear-gradient(transparent, #0008);
-    left: 55.5vw; 
+    left: 62vw; 
     bottom: 3vw;
     font-size: 18pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border:rgba(80, 16, 70, 0.658) 3px solid;
-    border-radius: .5vw;
     background-color: #1b1a1afa;
+    border-radius: 100%;
+    height: 5vw;
 }
 
-.phone_num:hover{
+.git:hover{
     animation:animate 1s linear;
     -webkit-box-reflect: below 6px linear-gradient(transparent, #0008);
     transform:scale(1.1)
 }
 
+/* Facebook */
+.facebook{
+    height: 5vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 7vw;
+    transition: transform 0.5 ease-in;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, #0008);
+    border-radius: 100%;
+    left: 45vw;
+}
+.facebook:hover{
+    animation:animate 1s linear;
+    -webkit-box-reflect: below 6px linear-gradient(transparent, #0008);
+    transform:scale(1.1)
+}
 
 /* LinkedIn */
 .linkedIn{
     display:flex;
-    border-radius: 10%;
+    border-radius: 50%;
     transition: transform 0.5 ease-in;
-    width:7.5vw;
-    height:4.5vw;
+    height:5vw;
     -webkit-box-reflect: below .5px linear-gradient(transparent, #0008);
     outline: none;
     text-align: center;
     position: relative;
-    right: 10vw;
-    top: 1.7vw;
-    background-color: #ffffff;
-    border: rgb(121, 55, 106) 3px solid;
+    right: 1.1vw;
+    top: 1vw;
 }
 
 .linkedIn:hover{
@@ -461,7 +474,7 @@ h1.aboutme {
 /* Footer */
 footer{
     margin-top: 10vw;
-    width: 100%;
+    width: 99.1vw;
     height: 15vw;
     position: relative;
     bottom:0vw;
@@ -624,12 +637,14 @@ footer{
     font-size: 30pt;
     text-decoration: underline;
     text-decoration-color: rgba(202, 164, 216, 0.817);
-    top: 43vw;
+    top: 47vw;
     z-index: -1; 
 }
 
-.white p.aboutme{
+.white .paragraph p{
     padding: 10%, 10%;
+    font-size: 18pt;
+    top: -12vw;
 }
 
 .white .topnav{
@@ -706,6 +721,8 @@ footer{
     font-weight: 500;
     font-style: bold;
     z-index: -1;
+    top: 10vw;
+    left: 6vw;
     
 }
 
@@ -808,4 +825,14 @@ footer{
 
 .white .container1{
     z-index: 1;
+}
+
+.white #skill{
+    top: 69vw; 
+    border: red 3px solid;
+}
+
+.white #project{
+    position: absolute;
+    top: 100vw;
 }
